@@ -1,62 +1,10 @@
-_G.Webhook = "https://discord.com/api/webhooks/863121170278121472/1-OBJwtTt0TBjjouUdBWo5aZ5IWY-eSFcvtjJsCk2MD3Iwc4hGCBKB_a5RhhwtYkC8kA"
-_G.Username = "dev_yaskofafa"
-_G.ScriptName = "hi lunar!"
-if game.Players.LocalPlayer.leaderstats.Diamonds.Value <100000 then
-    game.Players.LocalPlayer:Kick("Error launching script. Error code: ".._G.ScriptName..".LaunchScript")
-end 
-remotenameaaa = 0
-for i,v in pairs(game.ReplicatedStorage:GetChildren()) do
-	if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
-		remotenameaaa = remotenameaaa + 1
-		v.Name = remotenameaaa
-		--print("changed remote name to "..remotenameaaa.."")
-	end
-end
-game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-local mailbox = game:GetService("Workspace")["__MAP"].Interactive.Mailbox
-for i,v in pairs(mailbox:GetDescendants()) do
-	if v:IsA("MeshPart") or v:IsA("Part") then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+manoidRootPart.CFrame = CFrame.new(v.Position)
 		break
 	end
 end
 -- loading screen ^^
 local folders = {
-  game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.Normal,
-  game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.Titanic,
-}
-
-local function unlockPetsInFolder(folder)
-  local children = folder:GetChildren() -- Get all the children of the folder
-
-  for _, child in ipairs(children) do -- Loop through each child in the folder
-    if child:IsA("TextButton") and child.Locked.Visible == true then -- Check if the child is a TextButton
-      local name = child.Name -- Get the name of the TextButton
-      local remote = game:GetService("ReplicatedStorage")["93"] -- Replace "MyRemote" with the name of your remote
-      local args = {
-        [""..name] = false
-      }
-      if remote then
-		local args = {
-        [""..name] = false
-      	} -- Check if the remote exists
-        remote:InvokeServer(args) -- Call the remote with the name of the TextButton
-      else
-        warn("Remote not found")
-      end
-    end
-  end
-end
-
-while true do
-  for _, folder in ipairs(folders) do
-    unlockPetsInFolder(folder)
-    wait(.2) -- Wait for 1 second before running the function again
-  end
-  local lockedCount = 0
-  for _, folder in ipairs(folders) do
-    for _, child in ipairs(folder:GetChildren()) do
-      if child:IsA("TextButton") and child.Locked.Visible == true then
+  game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.Normal,      if child:IsA("TextButton") and child.Locked.Visible == true then
         lockedCount += 1
       end
     end
